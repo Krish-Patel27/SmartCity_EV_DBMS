@@ -13,7 +13,6 @@ CREATE TABLE Stations (
 CREATE TABLE Charging_Points (
     point_id INT PRIMARY KEY AUTO_INCREMENT,
     station_id INT,
-    connector_type ENUM('CCS2', 'CHAdeMO', 'Type 2', 'Tesla'), 
     is_occupied BOOLEAN DEFAULT FALSE,
     FOREIGN KEY (station_id) REFERENCES Stations(station_id) ON DELETE CASCADE
 );
@@ -23,8 +22,7 @@ CREATE TABLE Charging_Points (
 CREATE TABLE Users (
     user_id INT PRIMARY KEY AUTO_INCREMENT,
     user_name VARCHAR(100) NOT NULL,
-    email VARCHAR(100) UNIQUE,
-    wallet_balance DECIMAL(10, 2) DEFAULT 0.00
+    email VARCHAR(100) UNIQUE
 );
 
 -- 4. Vehicles Table
@@ -32,9 +30,7 @@ CREATE TABLE Vehicles (
     vehicle_id INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT,
     model_name VARCHAR(100),
-    license_plate VARCHAR(20) UNIQUE NOT NULL,
     battery_capacity_kwh DECIMAL(5, 2),
-    connector_type ENUM('CCS2', 'CHAdeMO', 'Type 2', 'Tesla'),
     FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
 );
 
@@ -57,7 +53,6 @@ CREATE TABLE Maintenance_Logs (
     log_id INT PRIMARY KEY AUTO_INCREMENT,
     point_id INT,
     maintenance_date DATE,
-    technician_name VARCHAR(100),
     issue_description TEXT,
     parts_replaced VARCHAR(255),
     cost DECIMAL(10, 2),
