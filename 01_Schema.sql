@@ -66,6 +66,6 @@ CREATE TABLE Payments (
     transaction_date DATETIME DEFAULT CURRENT_TIMESTAMP,
     amount_paid DECIMAL(10, 2),
     payment_method ENUM('Wallet', 'Credit Card', 'UPI', 'RFID Card'),
-    payment_status ENUM('Success', 'Failed', 'Pending') DEFAULT 'Success',
+    payment_status ENUM('Success', 'Failed', 'Pending') DEFAULT 'Pending',
     FOREIGN KEY (session_id) REFERENCES Charging_Sessions(session_id)
 );
