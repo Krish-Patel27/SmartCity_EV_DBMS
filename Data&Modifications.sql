@@ -83,6 +83,7 @@ SET SQL_SAFE_UPDATES = 0;
 
 UPDATE  Maintenance_Logs
 SET maintenance_date = NOW() where issue_description = 'Overheating during peak usage';
+SET SQL_SAFE_UPDATES = 1;
 
 UPDATE Maintenance_Logs 
 SET maintenance_date = DATE_ADD(maintenance_date, INTERVAL 2 YEAR)
