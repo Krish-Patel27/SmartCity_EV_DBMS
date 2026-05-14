@@ -2,7 +2,7 @@ CREATE DATABASE IF NOT EXISTS SmartCity_EV_DBMS;
 USE SmartCity_EV_DBMS;
 
 -- 1. Stations Table
-CREATE TABLE Stations (
+CREATE TABLE Station (
     station_id INT PRIMARY KEY AUTO_INCREMENT,
     location_name VARCHAR(100) NOT NULL,
     capacity_kw INT DEFAULT 220, -- Based on 220 KV substation context
