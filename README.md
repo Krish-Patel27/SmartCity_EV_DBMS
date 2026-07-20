@@ -1,46 +1,53 @@
-#Smart City EV Charging Network (DBMS Project)
-Description
-This project is a relational database management system designed to monitor and analyze a smart electric vehicle (EV) charging network, featuring substation infrastructure tracking, session management, billing, and maintenance logging.
+🎓 Smart City EV Charging Network (DBMS Project)
 
-Features
-Station & Substation Management: Track hub capacities, operational statuses, and infrastructure details.
+📌 Description
 
-Charging Point Operations: Monitor individual charging bays and real-time occupancy.
+This project is a relational database system designed to monitor and analyze a smart electric vehicle (EV) charging network, featuring substation infrastructure tracking, session management, billing, and maintenance logging.
 
-User & Vehicle Registry: Manage EV owners and vehicle battery specifications.
+🚀 Features
 
-Session & Energy Tracking: Log power consumption, timestamps, and session durations.
+Station & Substation Management
 
-Payment Processing: Handle billing methods, transaction amounts, and payment statuses.
+Charging Point Operations
 
-Maintenance & Repair Logging: Record service history, replaced parts, and repair expenditures.
+User & Vehicle Registry
 
-Technologies Used
+Session & Energy Tracking
+
+Payment Processing
+
+Maintenance & Repair Logging
+
+🛠️ Technologies Used
+
 SQL (MySQL)
 
 C++ (Planned Frontend Integration)
 
-Database Design
-ER Diagram conceptualized for smart grid infrastructure
+🧩 Database Design
+
+ER Diagram included
 
 Normalized relational schema optimized for data integrity
 
 Primary Keys, Foreign Keys, and Cascading Deletes implemented
 
-SQL Operations
-INSERT, UPDATE, DELETE for data manipulation
+📊 SQL Operations
 
-WHERE clause for precise filtering
+INSERT, UPDATE, DELETE
 
-Complex JOIN operations across multiple entities
+WHERE clause
 
-GROUP BY & HAVING for aggregations and cost analysis
+Complex JOIN operations
 
-ORDER BY for ranking users and maintenance costs
+GROUP BY & HAVING
 
-Subqueries & CTEs for advanced reporting and session duration analysis
+ORDER BY
 
-Future Roadmap & Enhancements
+Subqueries & CTEs
+
+🚀 Future Roadmap & Enhancements
+
 C++ Frontend Interface: Develop a C++ application utilizing MySQL Connector/C++ for a driver portal and operator dashboard.
 
 Advanced Query Optimization: Implement indexing strategies, evaluate execution plans with EXPLAIN, and optimize heavy analytical queries.
